@@ -87,6 +87,7 @@ class RMSNorm(nn.Module):
     def _norm(self, x):
         return torch.rsqrt(x.pow(2).mean(-1, keepdim=True) + self.eps) * x
    
-# forward前向传播
+# 前向传播
     def forward(self, x):
         return self.weight*self._norm(x.float()).type_as(x)
+

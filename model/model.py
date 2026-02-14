@@ -121,7 +121,7 @@ def precompute_freqs(
                 dim // 2,
             )
 
-            # 计算power
+            # 计算power 
             power = torch.arange(0, dim // 2, device=freqs.device).float() / max(
                 dim // 2 - 1, 1
             )
